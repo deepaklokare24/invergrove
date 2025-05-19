@@ -77,7 +77,7 @@ function App() {
               <p>Servicing Inver Grove Heights, South St. Paul, Rosemount and Coates</p>
             </div>
             <div className="overview-card">
-              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" alt="Timely Pickup" className="card-image" />
+              <img src="/images/pickup.jpg" alt="Timely Pickup" className="card-image" />
               <FontAwesomeIcon icon={faClock} className="section-icon" />
               <h3>Timely Pickup</h3>
               <p>Consistent and reliable service on your scheduled days</p>
@@ -91,19 +91,31 @@ function App() {
           <h2>Our Services</h2>
           <div className="services-grid">
             <div className="service-card">
-              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" alt="Residential Collection" className="card-image" />
+              <img 
+                src="/images/ResidentialCollection.jpg" 
+                alt="Residential Collection" 
+                className="card-image"
+              />
               <FontAwesomeIcon icon={faTruck} className="service-icon" />
               <h3>Residential Collection</h3>
               <p>Weekly garbage and recycling pickup for your home</p>
             </div>
             <div className="service-card">
-              <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=600&q=80" alt="Recycling Services" className="card-image" />
+              <img 
+                src="/images/RecyclingServices.jpg" 
+                alt="Recycling Services" 
+                className="card-image"
+              />
               <FontAwesomeIcon icon={faRecycle} className="service-icon" />
               <h3>Recycling Services</h3>
               <p>Environmentally responsible waste management</p>
             </div>
             <div className="service-card">
-              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" alt="Yard Waste" className="card-image" />
+              <img 
+                src="/images/YardWaste.jpg" 
+                alt="Yard Waste" 
+                className="card-image"
+              />
               <FontAwesomeIcon icon={faLeaf} className="service-icon" />
               <h3>Yard Waste</h3>
               <p>Seasonal yard waste collection and disposal</p>
@@ -159,7 +171,7 @@ function App() {
           <h2>Yard Waste Collection</h2>
           <div className="yard-waste-content">
             <div className="yard-waste-info">
-              <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80" alt="Yard Waste" className="section-image" />
+              <img src="/images/yard-waste.jpg" alt="Yard Waste" className="section-image" />
               <FontAwesomeIcon icon={faLeaf} className="section-icon" />
               <p>Please contact us prior to your service day with how many bags you will have.</p>
               <div className="notice">
@@ -175,7 +187,6 @@ function App() {
         <div className="container">
           <h2>Holiday Schedule</h2>
           <div className="holiday-content">
-            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" alt="Holiday Schedule" className="section-image" />
             <FontAwesomeIcon icon={faCalendarAlt} className="section-icon" />
             <div className="holiday-list">
               <div className="holiday-item">

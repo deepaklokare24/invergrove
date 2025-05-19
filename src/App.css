@@ -10,7 +10,7 @@
   --gray-light: #f5f5f5;
   --gray: #e0e0e0;
   --spacing-unit: 1rem;
-  --max-width: 1400px;
+  --max-width: 100%;
   --border-radius: 12px;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
@@ -38,7 +38,7 @@ body {
 
 .app {
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -63,13 +63,13 @@ body {
 }
 
 .nav-content {
-  max-width: var(--max-width);
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
 .logo {
@@ -218,9 +218,9 @@ body {
 }
 
 .container {
-  max-width: var(--max-width);
-  margin: 0 auto;
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 0 2rem;
 }
 
@@ -249,7 +249,7 @@ body {
 /* Overview Section */
 .overview-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 2rem;
   width: 100%;
@@ -285,7 +285,7 @@ body {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   width: 100%;
 }
@@ -301,6 +301,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .service-card:hover {
@@ -316,6 +317,23 @@ body {
 
 .service-card p {
   margin-top: auto;
+  padding-top: 1rem;
+}
+
+.card-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.service-card:hover .card-image {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Contact Section */
@@ -326,7 +344,7 @@ body {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 2fr 1fr;
   gap: 4rem;
   align-items: start;
   width: 100%;
@@ -417,11 +435,22 @@ body {
   width: 100%;
 }
 
-.holiday-list {
-  display: grid;
-  gap: 2rem;
+.holiday-content {
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.holiday-content .section-icon {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.holiday-list {
+  display: grid;
+  gap: 1.5rem;
   width: 100%;
 }
 
@@ -430,11 +459,24 @@ body {
   padding: 2rem;
   border-radius: var(--border-radius);
   transition: var(--transition);
+  text-align: left;
+  border-left: 4px solid var(--primary-color);
 }
 
 .holiday-item:hover {
   transform: translateY(-4px);
   box-shadow: var(--box-shadow);
+}
+
+.holiday-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.holiday-item p {
+  color: var(--text-light);
+  font-size: 1.1rem;
 }
 
 /* Footer */
@@ -467,6 +509,13 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .overview-grid,
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .nav-content,
   .container {
@@ -485,6 +534,22 @@ body {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .holiday-content {
+    padding: 1rem 0;
+  }
+
+  .holiday-item {
+    padding: 1.5rem;
+  }
+
+  .holiday-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .holiday-item p {
+    font-size: 1rem;
   }
 }
 
@@ -509,15 +574,6 @@ body {
 
 .section {
   animation: fadeIn 1s ease-out;
-}
-
-.card-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: var(--border-radius);
-  margin-bottom: 1.5rem;
-  box-shadow: var(--box-shadow);
 }
 
 .section-image {
