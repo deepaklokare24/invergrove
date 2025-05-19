@@ -65,7 +65,7 @@ function App() {
           <h2>Company Overview</h2>
           <div className="overview-grid">
             <div className="overview-card">
-              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" alt="Professional Service" className="card-image" />
+              <img src="/images/professional-service.jpg" alt="Professional Service" className="card-image" />
               <FontAwesomeIcon icon={faTruck} className="section-icon" />
               <h3>Professional Service</h3>
               <p>Reliable garbage and recycling collection for your home or business</p>
